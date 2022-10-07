@@ -35,19 +35,6 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
         Intent secondScreen = new Intent(this, CartActivity.class);
-        URL url = null;
-        try {
-            url = new URL("http://localhost:8080/web/get?key=value");
-
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        try {
-            HttpURLConnection urlConnection = (HttpURLConnection)url.openConnection();
-
-        }catch(MalformedURLException e){
-
-        }
 
 
 
