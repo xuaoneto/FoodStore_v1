@@ -10,16 +10,9 @@ import android.view.View;
 import com.example.foodstore.ui.main.SectionsPagerAdapter;
 import com.example.foodstore.databinding.ActivityMainBinding;
 
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
-
-
 public class MainActivity extends AppCompatActivity {
-
     private ActivityMainBinding binding;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +22,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = binding.viewPager;
+        viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
         Intent secondScreen = new Intent(this, CartActivity.class);
+        FloatingActionButton botaoteste = findViewById(R.id.botaoPteste);
+        botaoteste.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
 
@@ -45,4 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
 }
