@@ -35,10 +35,10 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/buttonParse"
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     </androidx.viewpager.widget.ViewPager>
 
@@ -54,9 +54,11 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/botaoPteste"
-        android:layout_width="126dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        app:layout_anchor="@+id/view_pager"
+        app:layout_anchorGravity="center"
         app:srcCompat="@drawable/foodstore" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
