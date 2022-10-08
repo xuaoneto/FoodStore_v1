@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -54,23 +55,23 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:backgroundTint="#F41A1A"
-        app:layout_anchor="@+id/botaoPteste"
-        app:layout_anchorGravity="center"
+        app:layout_anchor="@+id/view_pager"
+        app:layout_anchorGravity="end|bottom"
         app:srcCompat="@drawable/ic_shopping_cart" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/botaoPteste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_gravity="bottom|start"
         android:clickable="true"
-
+        app:layout_anchor="@+id/view_pager"
+        app:layout_anchorGravity="start|bottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="@dimen/fab_margin"
         app:srcCompat="@drawable/foodstore" />
 
     <ProgressBar
@@ -79,6 +80,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_anchor="@+id/view_pager"
-        app:layout_anchorGravity="top|center" />
+        app:layout_anchorGravity="center" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
