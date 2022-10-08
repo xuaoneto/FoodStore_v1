@@ -67,14 +67,15 @@ public class MainActivity extends AppCompatActivity {
                         if (response != null) {
                             for (int i = 0; i < response.length(); i++){
                                 try {
+                                    JSONObject currItem = response.getJSONObject(i);
                                     Burger currentBurger = new Burger(
-                                            response.getJSONObject(i).optString("id"),
-                                            response.getJSONObject(i).optString("name"),
-                                            response.getJSONObject(i).optInt("price"),
-                                            response.getJSONObject(i).optInt("rate"),
-                                            response.getJSONObject(i).optString("dsc"),
-                                            response.getJSONObject(i).optString("img"),
-                                            response.getJSONObject(i).optString("country")
+                                            currItem.optString("id"),
+                                            currItem.optString("name"),
+                                            currItem.optInt("price"),
+                                            currItem.optInt("rate"),
+                                            currItem.optString("dsc"),
+                                            currItem.optString("img"),
+                                            currItem.optString("country")
                                             );
                                     burgerArray.add(currentBurger);
                                 } catch (JSONException e) {
@@ -83,7 +84,13 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         Burger burger = burgerArray.get(0);
-                        textView.setText(burger.getCountry()+" "+burger.getName()+" "+burger.getDsc());
+                        textView.setText(burger.getCountry()+"/n "
+                                        +burger.getName()+"/n "
+                                        +burger.getDsc()+"/n "
+                                        +burger.getPrice());
+
+
+
                         loading.setVisibility(View.INVISIBLE);
 
 //                        JSONObject jsono = new JSONObject();
