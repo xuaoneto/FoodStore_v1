@@ -58,15 +58,19 @@
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="16dp"
         app:backgroundTint="#F41A1A"
+        app:layout_anchor="@+id/botaoPteste"
+        app:layout_anchorGravity="center"
         app:srcCompat="@drawable/ic_shopping_cart" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/botaoPteste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="bottom|start"
         android:clickable="true"
-        app:layout_anchor="@+id/view_pager"
-        app:layout_anchorGravity="center"
+
         app:srcCompat="@drawable/foodstore" />
 
     <ProgressBar
