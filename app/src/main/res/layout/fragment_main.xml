@@ -20,4 +20,11 @@
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintTop_creator="1" />
 
+    <TextView
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="FoodStore\nDelivery" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

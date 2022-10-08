@@ -83,7 +83,13 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         Burger burger = burgerArray.get(0);
-                        textView.setText(burger.getCountry()+" "+burger.getName()+" "+burger.getDsc());
+                        textView.setText(burger.getCountry()+"/n "
+                                        +burger.getName()+"/n "
+                                        +burger.getDsc()+"/n "
+                                        +burger.getPrice());
+
+
+
                         loading.setVisibility(View.INVISIBLE);
 
 //                        JSONObject jsono = new JSONObject();
