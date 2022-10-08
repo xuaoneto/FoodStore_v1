@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
+
         FloatingActionButton fab = binding.fab;
         Intent secondScreen = new Intent(this, CartActivity.class);
 
@@ -84,6 +85,13 @@ public class MainActivity extends AppCompatActivity {
                         Burger burger = burgerArray.get(0);
                         textView.setText(burger.getCountry()+" "+burger.getName()+" "+burger.getDsc());
                         loading.setVisibility(View.INVISIBLE);
+
+//                        JSONObject jsono = new JSONObject();
+//                        try {
+//                            jsono.put("id", "test");
+//                        } catch (JSONException e) {}
+//                        textView.setText(jsono.toString());
+
                     }
 
                 }, new Response.ErrorListener() {
