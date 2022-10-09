@@ -21,6 +21,7 @@
         tools:layout_constraintTop_creator="1" />
 
     <TextView
+
         android:textSize="40sp"
         android:gravity="center"
         android:layout_width="match_parent"
