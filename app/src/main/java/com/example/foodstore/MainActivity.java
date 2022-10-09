@@ -22,6 +22,7 @@ import android.util.JsonWriter;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.ZoomControls;
 
 import com.example.foodstore.ui.main.SectionsPagerAdapter;
 import com.example.foodstore.databinding.ActivityMainBinding;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = binding.tabs;
         tabs.setupWithViewPager(viewPager);
+
 
         FloatingActionButton fab = binding.fab;
         Intent secondScreen = new Intent(this, CartActivity.class);
@@ -89,16 +91,7 @@ public class MainActivity extends AppCompatActivity {
                                         +burger.getDsc()+"/n "
                                         +burger.getPrice());
 
-
-
                         loading.setVisibility(View.INVISIBLE);
-
-//                        JSONObject jsono = new JSONObject();
-//                        try {
-//                            jsono.put("id", "test");
-//                        } catch (JSONException e) {}
-//                        textView.setText(jsono.toString());
-
                     }
 
                 }, new Response.ErrorListener() {

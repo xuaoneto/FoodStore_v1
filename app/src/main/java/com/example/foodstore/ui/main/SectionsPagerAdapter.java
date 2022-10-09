@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -51,7 +52,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        // Show 2 total pages.
+        // number of pages
         return 3;
     }
     //////////////////////////
@@ -85,7 +86,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             View itemView = mLayoutInflater.inflate(R.layout.pager_item, container, false);
             // Find and populate data into the page (i.e set the image)
             ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView);
-            // ...
+
             // Add the page to the container
             container.addView(itemView);
             // Return the page
