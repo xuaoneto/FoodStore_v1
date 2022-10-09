@@ -3,10 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/Arnaldo/Desktop/Projeto empresa/FoodStore_v1/app/src/main/res/layout/activity_cart.xml" value="0.1" />
         <entry key="..\:/Users/Arnaldo/Desktop/Projeto empresa/FoodStore_v1/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Arnaldo/Desktop/Projeto empresa/FoodStore_v1/app/src/main/res/layout/fragment_main.xml" value="0.19722222222222222" />
         <entry key="..\:/Users/Arnaldo/Desktop/Projeto empresa/FoodStore_v1/app/src/main/res/layout/pager_item.xml" value="0.20416666666666666" />
+=======
+>>>>>>> dc4bea50b006ddf7d9d9d379cc2ac1015e985ead
         <entry key="..\:/Users/jofer/AndroidStudioProjects/FoodStore/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/jofer/AndroidStudioProjects/FoodStore/app/src/main/res/layout/fragment_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/jofer/OneDrive/Desktop/Projetos/Java/FoodStore/app/src/main/res/drawable/ic_baseline_shopping_cart.xml" value="0.139" />
