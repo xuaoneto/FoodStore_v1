@@ -25,7 +25,6 @@ public class CartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cart);
 
 
-
     }
 
 

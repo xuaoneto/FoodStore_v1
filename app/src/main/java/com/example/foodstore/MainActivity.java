@@ -1,8 +1,6 @@
 package com.example.foodstore;
 
 import android.content.Intent;
-import android.graphics.ColorSpace;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.android.volley.Request;
@@ -10,21 +8,16 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.tabs.TabLayout;
-import androidx.viewpager.widget.ViewPager;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.util.JsonWriter;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.ZoomControls;
 
-import com.example.foodstore.ui.main.SectionsPagerAdapter;
 import com.example.foodstore.databinding.ActivityMainBinding;
 
 import org.json.JSONArray;
@@ -34,29 +27,41 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        Intent intent = new Intent(MainActivity.this, TelaInicialActivity.class);
+        startActivity(intent);
+
+
+
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         ProgressBar loading = findViewById(R.id.loading);
         loading.setVisibility(View.INVISIBLE);
 
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = binding.tabs;
-        tabs.setupWithViewPager(viewPager);
+        //SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        //ViewPager viewPager = findViewById(R.id.view_pager);
+        //viewPager.setAdapter(sectionsPagerAdapter);
+        //TabLayout tabs = binding.tabs;
+        //tabs.setupWithViewPager(viewPager);
 
 
         FloatingActionButton fab = binding.fab;
         Intent secondScreen = new Intent(this, CartActivity.class);
 
         TextView textView = findViewById(R.id.texto);
+        ImageView imageView = findViewById(R.id.jsonImage);
 
         RequestQueue queue = Volley.newRequestQueue(this);
         String url ="https://ig-food-menus.herokuapp.com/burgers";
@@ -86,10 +91,13 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                         Burger burger = burgerArray.get(0);
+
                         textView.setText(burger.getCountry()+"/n "
                                         +burger.getName()+"/n "
                                         +burger.getDsc()+"/n "
                                         +burger.getPrice());
+
+                        imageView.setImg();burger.getImg();
 
                         loading.setVisibility(View.INVISIBLE);
                     }
